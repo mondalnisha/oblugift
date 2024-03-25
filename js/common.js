@@ -74,7 +74,15 @@ jQuery(document).ready(function ($) {
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll > 0) {
+      $(".page-header").addClass("hide");
+    } else {
+      $(".page-header").removeClass("hide");
+    }
+
+    if (scroll > 100) {
       $(".page-header").addClass("fixed");
+      $(".page-header").removeClass("hide");
+
     } else {
       $(".page-header").removeClass("fixed");
     }
