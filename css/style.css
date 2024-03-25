@@ -311,7 +311,7 @@ input[type="submit"]:hover {
 
 .page-header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   padding: 0 0 0;
@@ -328,6 +328,7 @@ input[type="submit"]:hover {
 }
 
 .page-header.fixed {
+  position: fixed;
   transform: translateY(0);
 }
 
