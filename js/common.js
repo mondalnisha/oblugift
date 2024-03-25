@@ -79,7 +79,7 @@ jQuery(document).ready(function ($) {
       $(".page-header").removeClass("hide");
     }
 
-    if (scroll > 150) {
+    if (scroll > 250) {
       $(".page-header").addClass("fixed");
       $(".page-header").removeClass("hide");
 
