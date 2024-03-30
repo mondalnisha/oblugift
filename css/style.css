@@ -678,11 +678,18 @@ input[type="submit"]:hover {
 
 .category-image {
   position: relative;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 .category-image img {
   width: 100%;
   border-radius: 6px;
+  transition: all .4s ease-in-out;
+}
+
+.category-box a:hover .category-image img {
+  transform: scale(1.1);
 }
 
 .category-title {
@@ -728,11 +735,19 @@ input[type="submit"]:hover {
 .product-image {
   width: 100%;
   display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
 }
 
 .product-image img {
   width: 100%;
   border-radius: 6px;
+  transition: all .4s ease-in-out;
+}
+
+.product-box:hover .product-image img {
+  transform: scale(1.1);
 }
 
 .product-btm {
@@ -874,6 +889,37 @@ input[type="submit"]:hover {
 
 .row-reverse {
   flex-direction: row-reverse;
+}
+
+.avatar-sm {
+  width: 48px;
+}
+
+.dev-info-block h5 {
+  margin: 0 0 5px;
+}
+
+.email-subscribe-block {
+  background: var(--off-gray);
+}
+
+.dev-info-box {
+  box-shadow: 0 0px 10px rgba(236, 236, 236, 1);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.email-subscribe-form-field {
+  text-align: right;
+}
+
+.email-subscribe-form-field [type="text"],
+.email-subscribe-form-field [type="email"] {
+  background: var(--white-color);
+}
+
+.email-subscribe-form-field [type=submit] {
+  margin: 0 0 0 0;
 }
 
 /* footer */
@@ -1123,7 +1169,8 @@ input[type="submit"]:hover {
     font-size: 22px;
   }
 
-  h4, .h4-title {
+  h4, .h4-title,
+  h5, .h5-title {
     font-size: 16px;
   }
 
@@ -1325,6 +1372,10 @@ input[type="submit"]:hover {
   .contact-right-box {
     padding-top: 28px;
   }
+
+  .email-subscribe-content {
+    padding-bottom: 24px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1346,7 +1397,8 @@ input[type="submit"]:hover {
     font-size: 20px;
   }
 
-  h4, .h4-title {
+  h4, .h4-title,
+  h5, .h5-title {
     font-size: 15px;
   }
 
@@ -1570,7 +1622,7 @@ input[type="submit"]:hover {
   }
 
   .cmn-btn {
-    min-width: 66px;
+    min-width: 110px;
     padding: 8px 10px;
     font-size: 13px;
   }
